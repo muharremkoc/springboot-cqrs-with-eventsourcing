@@ -1,4 +1,4 @@
-version: '3.3'
+ version: '3.3'
  services:
   axonserver:
     image: axoniq/axonserver
@@ -14,12 +14,12 @@ version: '3.3'
     networks:
       - axon-demo
 
-  volumes:
-  axonserver-data:
-  axonserver-events:
-  axonserver-config:
+ volumes:
+    axonserver-data:
+    axonserver-events:
+    axonserver-config:
 
-volumes:
+ volumes:
   axonserver-data:
     driver: local
     driver_opts:
@@ -39,5 +39,5 @@ volumes:
       device: ${PWD}/config
       o: bind
 
-networks:
+ networks:
   axon-demo:
